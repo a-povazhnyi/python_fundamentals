@@ -1,9 +1,9 @@
 class First:
     def __init__(self):
-        self.name = 'First'
+        self._name = 'First'
 
     def get_name(self):
-        return self.name
+        return self._name
 
     @staticmethod
     def get_type():
@@ -12,18 +12,18 @@ class First:
 
 class Second:
     def __init__(self):
-        self.name = 'Second'
+        self._name = 'Second'
 
     def get_name(self):
-        return self.name
+        return self._name
 
 
 class Third:
     def __init__(self):
-        self.py = 'Python'
+        self._py = 'Python'
 
     def get_programming_language(self):
-        return self.py
+        return self._py
 
 
 class Chest(First, Second, Third):
