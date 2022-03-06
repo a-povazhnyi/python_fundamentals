@@ -1,14 +1,16 @@
 class Iterator:
-    def __init__(self, sample):
-        self.sample = sample
-        self.limit = len(sample)
-        self.counter = 0
+    def __init__(self, sample: str):
+        self._sample = sample
+        self._limit = len(sample) - 1
+        self._current_index = -1
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.counter < self.limit:
-            self.counter += 1
-            return self.sample[self.counter - 1]
-        raise StopIteration
+        self._current_index += 1
+
+        if self._current_index > self._limit:
+            raise StopIteration
+        else:
+            return self._sample[self._current_index]
