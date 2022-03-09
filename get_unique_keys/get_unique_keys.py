@@ -7,7 +7,7 @@ def get_unique_keys(structure):
 
     for dish in structure['Cook Book']:
         used.extend(*dish.values())
-    return set(used)
+    return list(set(used))
 
 
 # 2
